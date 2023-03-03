@@ -10,12 +10,10 @@
 # supported CodeQL languages.
 #
 name: "CodeQL"
-
 on:
   push:
     branches: [ "master" ]
   pull_request:
-    # The branches below must be a subset of the branches above
     branches: [ "master" ]
 jobs:
   analyze:
@@ -37,7 +35,7 @@ jobs:
 
     steps:
     - name: Checkout repository
-      uses: actions/checkout@v3
+      uses: actions/checkout@v3 #v2: v2.3.4 availabl
 
     # Initializes the CodeQL tools for scanning.
     - name: Initialize CodeQL
